@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace ElectionDay.Classes
 {
-    abstract class AbstractVotabile
+    public abstract class AbstractVotabile
     {
+        public AbstractVotabile(string nome)
+        {
+            _nome = nome;
+        }
         private string _nome;
 
         public string Nome
@@ -16,7 +21,7 @@ namespace ElectionDay.Classes
             set { _nome = value; }
         }
 
-        public abstract int votiPresi();
+        public abstract int votiPresi(ArrayList al);
 
     }
 }

@@ -32,6 +32,13 @@ namespace ElectionDay.Classes
             set { _schedeNulle = value; }
         }
 
+        private Dictionary<string, int> _partitieVoti;
+
+        public Dictionary<string, int> PartitieVoti
+        {
+            get { return _partitieVoti; }
+            set { _partitieVoti = value; }
+        }
 
     }
 }

@@ -1,24 +1,28 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ElectionDay.Classes;
 
 namespace ElectionDay.Classes
 {
-    class Partito : AbstractVotabile
+    public class Partito : AbstractVotabile
     {
-        private string _nome;
-
-        public string Nome
+        public Partito(string nome) : base(nome)
         {
-            get { return _nome; }
-            set { _nome = value; }
         }
 
-        public override int votiPresi()
+        public override int votiPresi(ArrayList al)
         {
-            throw new NotImplementedException();
+            int votiTot = 0;
+            foreach(SeggioElettorale s in al)
+            {
+                votiTot += s.PartitieVoti[Nome];
+            }
+
+            return votiTot;
         }
     }
 }
