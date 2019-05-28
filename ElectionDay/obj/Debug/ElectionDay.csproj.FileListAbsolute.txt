@@ -1,0 +1,10 @@
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\bin\Debug\ElectionDay.exe.config
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\bin\Debug\ElectionDay.exe
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\bin\Debug\ElectionDay.pdb
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\obj\Debug\ElectionDay.csprojAssemblyReference.cache
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\obj\Debug\ElectionDay.Form1.resources
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\obj\Debug\ElectionDay.Properties.Resources.resources
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\obj\Debug\ElectionDay.csproj.GenerateResource.cache
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\obj\Debug\ElectionDay.csproj.CoreCompileInputs.cache
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\obj\Debug\ElectionDay.exe
+C:\Users\m.gregoricchio\source\repos\ElectionDay\ElectionDay\obj\Debug\ElectionDay.pdb
