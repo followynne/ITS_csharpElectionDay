@@ -15,3 +15,15 @@ C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay
 C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\obj\Debug\ElectionDay.csproj.CoreCompileInputs.cache
 C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\obj\Debug\ElectionDay.exe
 C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\obj\Debug\ElectionDay.pdb
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\bin\Debug\ElectionDay.exe.config
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\bin\Debug\ElectionDay.exe
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\bin\Debug\ElectionDay.pdb
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.csprojAssemblyReference.cache
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.Form1.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.Properties.Resources.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.csproj.GenerateResource.cache
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.csproj.CoreCompileInputs.cache
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.exe
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.pdb
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.Form3.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.Form2.resources

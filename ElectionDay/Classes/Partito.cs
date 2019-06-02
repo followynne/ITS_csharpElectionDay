@@ -8,21 +8,29 @@ using ElectionDay.Classes;
 
 namespace ElectionDay.Classes
 {
-    public class Partito : AbstractVotabile
+    public class Partito
     {
-        public Partito(string nome) : base(nome)
+        public Partito(string nome)
         {
+            _nome = nome;
         }
 
-        public override int votiPresi(ArrayList al)
-        {
-            int votiTot = 0;
-            foreach(SeggioElettorale s in al)
-            {
-                votiTot += s.PartitieVoti[Nome];
-            }
+        private string _nome;
 
-            return votiTot;
+        public string Nome
+        {
+            get { return _nome; }
+            set { _nome = value; }
         }
+
+        private int _voto;
+
+        public int Voto
+        {
+            get { return _voto; }
+            set { _voto = value; }
+        }
+
+
     }
 }
