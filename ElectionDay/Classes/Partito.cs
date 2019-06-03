@@ -31,6 +31,10 @@ namespace ElectionDay.Classes
             set { _voto = value; }
         }
 
+        public override string ToString()
+        {
+            return _nome;
+        }
 
     }
 }

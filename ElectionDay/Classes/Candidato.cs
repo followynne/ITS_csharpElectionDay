@@ -9,11 +9,10 @@ namespace ElectionDay.Classes
     class Candidato
     {
 
-        public Candidato(string nome, List<Partito> p)
+        public Candidato (string nome, List<Partito> p)
         {
             _nome = nome;
             _partitiAssociati = p;
-
         }
         private string _nome;
 
@@ -38,8 +37,5 @@ namespace ElectionDay.Classes
             get { return _votiTot; }
             set { _votiTot = value; }
         }
-
-
-
     }
 }

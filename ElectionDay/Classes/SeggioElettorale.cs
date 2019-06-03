@@ -9,10 +9,11 @@ namespace ElectionDay.Classes
 {
     public class SeggioElettorale
     {
-        public SeggioElettorale(string seggio, string città)
+        public SeggioElettorale(string seggio, string città, string regione)
         {
             _numSeggio = seggio;
             _città = città;
+            _regione = regione;
             _schedeNulle = 0;
             _schedeBianche = 0;
             _partiti = new List<Partito> {
@@ -41,6 +42,14 @@ namespace ElectionDay.Classes
             set { _città = value; }
         }
 
+        private string _regione;
+
+        public string Regione
+        {
+            get { return _regione; }
+            set { _regione = value; }
+        }
+
         private int _schedeNulle;
 
         public int SchedeNulle
@@ -61,25 +70,33 @@ namespace ElectionDay.Classes
         public List<Partito> Partiti
         {
             get { return _partiti; }
-            
         }
 
         public int VotiTotali()
         {
-            return 0;
+            int tot = 0;
+            foreach (Partito p in _partiti)
+            {
+                tot += p.Voto;
+            }
+            return (tot += _schedeBianche + _schedeNulle);
+        }
+
+        public string Riepilogo()
+        {
+            string results = "I voti del seguente seggio " + _numSeggio + " sono: ";
+            foreach(Partito p in _partiti)
+            {
+                results += p.Nome + " " + p.Voto + " ";
+            }
+            results += "Schede Bianche " + _schedeBianche + " ";
+            results += "Schede Nulle " + _schedeNulle + " ";
+            return results;
         }
 
         public override string ToString()
         {
-            string results = "I voti del seguente seggio " + _numSeggio + " sono:\n";
-            foreach(Partito p in _partiti)
-            {
-                results += p.Nome + " " + p.Voto + "\n";
-            }
-            results += "Schede Bianche " + _schedeBianche;
-            results += "Schede Nulle " + _schedeNulle;
-            return results;
+            return _numSeggio;
         }
-
     }
 }

@@ -13,25 +13,26 @@ namespace ElectionDay
 {
     public partial class Form1 : Form
     {
-
         public List<SeggioElettorale> Seggi { get; set; }
+        public List<SeggioElettorale> SeggiRegionali { get; set; }
 
-    public Form1()
+        public Form1()
         {
             InitializeComponent();
             Seggi = new List<SeggioElettorale> {
-                (new SeggioElettorale("201", "Torino")),
-                (new SeggioElettorale("202", "Torino")),
-                (new SeggioElettorale("210", "Milano")),
-                (new SeggioElettorale("211", "Pisa"))
+                (new SeggioElettorale("201", "Torino", "Piemonte")),
+                (new SeggioElettorale("202", "Torino", "Piemonte")),
+                (new SeggioElettorale("210", "Milano", "Milano")),
+                (new SeggioElettorale("211", "Pisa", "Firenze"))
+            };
+            SeggiRegionali = new List<SeggioElettorale> {
+                (new SeggioElettorale("201", "Torino", "Piemonte")),
+                (new SeggioElettorale("202", "Torino", "Piemonte")),
+                (new SeggioElettorale("210", "Milano", "Milano")),
+                (new SeggioElettorale("211", "Pisa", "Firenze"))
             };
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 f = new Form2(Seggi);
-            f.ShowDialog();
-        }
         #region consegna
         /* Scrivere app per raccolta dati di turno elettorale.
          * Nel caso in cui ci sia elezione regionale, aggregare i dati per candidato presidente di regione.
@@ -50,9 +51,28 @@ namespace ElectionDay
          */
         #endregion
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnNazionali_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3(Seggi);
+            Form2 f = new Form2(Seggi);
+            f.Show();
+        }
+
+        private void btnRegionali_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2(SeggiRegionali, btnRegionali);
+            f.Show();
+        }
+
+        private void btnCalcNaz_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3(SeggiRegionali, btnCalcNaz);
+            f.ShowDialog();
+        } 
+
+        private void btnCalcReg_Click(object sender, EventArgs e)
+        {
+
+            Form3 f = new Form3(Seggi, btnCalcReg, lblRegPV);
             f.ShowDialog();
         }
     }

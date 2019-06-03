@@ -28,62 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnNazionali = new System.Windows.Forms.Button();
+            this.btnRegionali = new System.Windows.Forms.Button();
+            this.btnCalcReg = new System.Windows.Forms.Button();
+            this.btnCalcNaz = new System.Windows.Forms.Button();
+            this.lblRegPV = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnNazionali
             // 
-            this.button1.Location = new System.Drawing.Point(231, 160);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 86);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Elezioni Regionali";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNazionali.Location = new System.Drawing.Point(474, 84);
+            this.btnNazionali.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNazionali.Name = "btnNazionali";
+            this.btnNazionali.Size = new System.Drawing.Size(171, 83);
+            this.btnNazionali.TabIndex = 0;
+            this.btnNazionali.Text = "Elezioni Nazionali";
+            this.btnNazionali.UseVisualStyleBackColor = true;
+            this.btnNazionali.Click += new System.EventHandler(this.btnNazionali_Click);
             // 
-            // button2
+            // btnRegionali
             // 
-            this.button2.Location = new System.Drawing.Point(568, 160);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 86);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Elezioni Nazionali";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRegionali.Location = new System.Drawing.Point(139, 84);
+            this.btnRegionali.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegionali.Name = "btnRegionali";
+            this.btnRegionali.Size = new System.Drawing.Size(184, 83);
+            this.btnRegionali.TabIndex = 1;
+            this.btnRegionali.Text = "Elezioni Regionali";
+            this.btnRegionali.UseVisualStyleBackColor = true;
+            this.btnRegionali.Click += new System.EventHandler(this.btnRegionali_Click);
             // 
-            // button3
+            // btnCalcReg
             // 
-            this.button3.Location = new System.Drawing.Point(539, 341);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(233, 83);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Ottieni i risultati per le Nazionali";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCalcReg.Location = new System.Drawing.Point(109, 285);
+            this.btnCalcReg.Name = "btnCalcReg";
+            this.btnCalcReg.Size = new System.Drawing.Size(233, 83);
+            this.btnCalcReg.TabIndex = 2;
+            this.btnCalcReg.Text = "Ottieni i risultati per le Regionali";
+            this.btnCalcReg.UseVisualStyleBackColor = true;
+            this.btnCalcReg.Click += new System.EventHandler(this.btnCalcReg_Click);
+            // 
+            // btnCalcNaz
+            // 
+            this.btnCalcNaz.Location = new System.Drawing.Point(445, 285);
+            this.btnCalcNaz.Name = "btnCalcNaz";
+            this.btnCalcNaz.Size = new System.Drawing.Size(233, 83);
+            this.btnCalcNaz.TabIndex = 3;
+            this.btnCalcNaz.Text = "Ottieni i risultati per le Nazionali";
+            this.btnCalcNaz.UseVisualStyleBackColor = true;
+            this.btnCalcNaz.Click += new System.EventHandler(this.btnCalcNaz_Click);
+            // 
+            // lblRegPV
+            // 
+            this.lblRegPV.AutoSize = true;
+            this.lblRegPV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegPV.Location = new System.Drawing.Point(192, 150);
+            this.lblRegPV.Name = "lblRegPV";
+            this.lblRegPV.Size = new System.Drawing.Size(79, 20);
+            this.lblRegPV.TabIndex = 4;
+            this.lblRegPV.Text = "Piemonte";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(801, 492);
+            this.Controls.Add(this.lblRegPV);
+            this.Controls.Add(this.btnCalcNaz);
+            this.Controls.Add(this.btnCalcReg);
+            this.Controls.Add(this.btnRegionali);
+            this.Controls.Add(this.btnNazionali);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnNazionali;
+        private System.Windows.Forms.Button btnRegionali;
+        private System.Windows.Forms.Button btnCalcReg;
+        private System.Windows.Forms.Button btnCalcNaz;
+        private System.Windows.Forms.Label lblRegPV;
     }
 }
 

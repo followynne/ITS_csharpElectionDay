@@ -13,20 +13,37 @@ namespace ElectionDay
 {
     public partial class Form3 : Form
     {
-        private List<Partito> _partiti=null;
+        private Button _button = null;
+        private Label _label = null;
         private List<SeggioElettorale> _seggi = null;
 
-        public Form3(List<SeggioElettorale> seggi)
+        public Form3(List<SeggioElettorale> seggi, Button b)
         {
             InitializeComponent();
             _seggi = seggi;
+            _button = b;
+        }
+
+        public Form3(List<SeggioElettorale> seggi, Button b, Label l)
+        {
+            InitializeComponent();
+            _seggi = seggi;
+            _button = b;
+            _label = l;
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            textBox1.AppendText(Election.VotiTotali(_seggi));
-            textBox1.AppendText(Election.VotiPartiti(_seggi));
-            textBox1.AppendText(Election.VotiCandidati(_seggi));
+            if (_button.Name.Equals("btnCalcNaz")) {
+                textBox1.AppendText(Election.VotiTotali(_seggi));
+                textBox1.AppendText(Election.VotiPartiti(_seggi));
+                // stampa su file con ToStringPartiti
+            } else if (_button.Name.Equals("btnCalcReg"))
+            {
+                textBox1.AppendText(Election.VotiTotali(_seggi));
+                textBox1.AppendText(Election.VotiPartiti(_seggi));
+                textBox1.AppendText(Election.VotiCandidati(_seggi));
+            }
         }
     }
 }
