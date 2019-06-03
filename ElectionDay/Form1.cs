@@ -16,31 +16,20 @@ namespace ElectionDay
 
         public List<SeggioElettorale> Seggi { get; set; }
 
-        public List<Partito> Partiti { get; set; }
-
-
     public Form1()
         {
             InitializeComponent();
-            Partiti = new List<Partito> {
-                new Partito("PD"),
-                new Partito("Lega Nord"),
-                new Partito("M5S"),
-                new Partito("Forza Italia"),
-                new Partito("Fratelli d'Italia"),
-                new Partito("Sinistra Radicale")
-            };
             Seggi = new List<SeggioElettorale> {
-                (new SeggioElettorale("201", "Torino", 0, Partiti)),
-                (new SeggioElettorale("202", "Torino", 0, Partiti)),
-                (new SeggioElettorale("210", "Milano", 0, Partiti)),
-                (new SeggioElettorale("211", "Pisa", 0, Partiti))
+                (new SeggioElettorale("201", "Torino")),
+                (new SeggioElettorale("202", "Torino")),
+                (new SeggioElettorale("210", "Milano")),
+                (new SeggioElettorale("211", "Pisa"))
             };
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2(Seggi, Partiti);
+            Form2 f = new Form2(Seggi);
             f.ShowDialog();
         }
         #region consegna
@@ -63,7 +52,7 @@ namespace ElectionDay
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3(Partiti, Seggi);
+            Form3 f = new Form3(Seggi);
             f.ShowDialog();
         }
     }

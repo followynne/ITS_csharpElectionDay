@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Candidato.cs" />
     <Compile Include="Classes\Election.cs" />
     <Compile Include="Classes\Partito.cs" />
     <Compile Include="Classes\SeggioElettorale.cs" />

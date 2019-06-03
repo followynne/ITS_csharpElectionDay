@@ -16,17 +16,17 @@ namespace ElectionDay
         private List<Partito> _partiti=null;
         private List<SeggioElettorale> _seggi = null;
 
-        public Form3(List<Partito> partiti, List<SeggioElettorale> seggi)
+        public Form3(List<SeggioElettorale> seggi)
         {
             InitializeComponent();
-            _partiti = partiti;
             _seggi = seggi;
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
             textBox1.AppendText(Election.VotiTotali(_seggi));
-            textBox1.AppendText(Election.VotiPartiti(_seggi, _partiti));
+            textBox1.AppendText(Election.VotiPartiti(_seggi));
+            textBox1.AppendText(Election.VotiCandidati(_seggi));
         }
     }
 }

@@ -27,3 +27,8 @@ C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\Elec
 C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.pdb
 C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.Form3.resources
 C:\Users\matte\Documents\Personale\Personal MG\ITS\C#\ITS_csharpElectionDay\ElectionDay\obj\Debug\ElectionDay.Form2.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\obj\Debug\ElectionDay.Form2.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\obj\Debug\ElectionDay.Form3.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\bin\Debug\ElectionDay.exe.config
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\bin\Debug\ElectionDay.exe
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\Programmazione C#\ElectionDay\ElectionDay\bin\Debug\ElectionDay.pdb

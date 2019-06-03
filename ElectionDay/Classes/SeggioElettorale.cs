@@ -9,12 +9,20 @@ namespace ElectionDay.Classes
 {
     public class SeggioElettorale
     {
-        public SeggioElettorale(string seggio, string città, int nulle, List<Partito> partiti)
+        public SeggioElettorale(string seggio, string città)
         {
             _numSeggio = seggio;
             _città = città;
-            _schedeNulle = nulle;
-            _partiti = partiti;
+            _schedeNulle = 0;
+            _schedeBianche = 0;
+            _partiti = new List<Partito> {
+                new Partito("PD"),
+                new Partito("Lega Nord"),
+                new Partito("M5S"),
+                new Partito("Forza Italia"),
+                new Partito("Fratelli d'Italia"),
+                new Partito("Sinistra Radicale")
+            }; 
         }
 
         private string _numSeggio;
@@ -39,6 +47,13 @@ namespace ElectionDay.Classes
         {
             get { return _schedeNulle; }
             set { _schedeNulle = value; }
+        }
+        private int _schedeBianche;
+
+        public int SchedeBianche
+        {
+            get { return _schedeBianche; }
+            set { _schedeBianche = value; }
         } 
 
         private List<Partito> _partiti;
@@ -46,7 +61,7 @@ namespace ElectionDay.Classes
         public List<Partito> Partiti
         {
             get { return _partiti; }
-            set { _partiti = value; }
+            
         }
 
         public int VotiTotali()
@@ -61,6 +76,8 @@ namespace ElectionDay.Classes
             {
                 results += p.Nome + " " + p.Voto + "\n";
             }
+            results += "Schede Bianche " + _schedeBianche;
+            results += "Schede Nulle " + _schedeNulle;
             return results;
         }
 
