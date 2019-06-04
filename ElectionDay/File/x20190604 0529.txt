@@ -1,0 +1,40 @@
+Per il seggio 201, città Torino, regione Piemonte, i risultati sono:
+PD = 0
+Lega Nord = 0
+M5S = 0
+Forza Italia = 0
+Fratelli d'Italia = 0
+Sinistra Radicale = 0
+Schede Nulle = 0
+Schede Bianche = 0
+
+Per il seggio 202, città Torino, regione Piemonte, i risultati sono:
+PD = 2213312
+Lega Nord = 2213
+M5S = 0
+Forza Italia = 0
+Fratelli d'Italia = 2213312
+Sinistra Radicale = 0
+Schede Nulle = 0
+Schede Bianche = 0
+
+Per il seggio 210, città Milano, regione Lombardia, i risultati sono:
+PD = 321412314
+Lega Nord = 0
+M5S = 0
+Forza Italia = 0
+Fratelli d'Italia = 0
+Sinistra Radicale = 231
+Schede Nulle = 32
+Schede Bianche = 0
+
+Per il seggio 211, città Pisa, regione Toscana, i risultati sono:
+PD = 0
+Lega Nord = 0
+M5S = 0
+Forza Italia = 111
+Fratelli d'Italia = 0
+Sinistra Radicale = 0
+Schede Nulle = 2
+Schede Bianche = 0
+

@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -44,6 +46,11 @@ namespace ElectionDay
                 textBox1.AppendText(Election.VotiPartiti(_seggi));
                 textBox1.AppendText(Election.VotiCandidati(_seggi));
             }
+
+            string path = @"../../File/x" + DateTime.Now.ToString("yyyyMMdd hhmm") + ".txt";
+            var f = File.CreateText(path);
+            f.Write(Election.ToStringPartiti(_seggi));
+            f.Close();
         }
     }
 }

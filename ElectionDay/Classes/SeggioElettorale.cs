@@ -84,13 +84,13 @@ namespace ElectionDay.Classes
 
         public string Riepilogo()
         {
-            string results = "I voti del seguente seggio " + _numSeggio + " sono: ";
+            string results = "I voti del seguente seggio " + _numSeggio + " sono:\n";
             foreach(Partito p in _partiti)
             {
-                results += p.Nome + " " + p.Voto + " ";
+                results += p.Nome + " " + p.Voto + "\n";
             }
-            results += "Schede Bianche " + _schedeBianche + " ";
-            results += "Schede Nulle " + _schedeNulle + " ";
+            results += "Schede Bianche " + _schedeBianche + "\n";
+            results += "Schede Nulle " + _schedeNulle + "\n";
             return results;
         }
 

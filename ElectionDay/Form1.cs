@@ -22,14 +22,14 @@ namespace ElectionDay
             Seggi = new List<SeggioElettorale> {
                 (new SeggioElettorale("201", "Torino", "Piemonte")),
                 (new SeggioElettorale("202", "Torino", "Piemonte")),
-                (new SeggioElettorale("210", "Milano", "Milano")),
-                (new SeggioElettorale("211", "Pisa", "Firenze"))
+                (new SeggioElettorale("210", "Milano", "Lombardia")),
+                (new SeggioElettorale("211", "Pisa", "Toscana"))
             };
             SeggiRegionali = new List<SeggioElettorale> {
                 (new SeggioElettorale("201", "Torino", "Piemonte")),
                 (new SeggioElettorale("202", "Torino", "Piemonte")),
-                (new SeggioElettorale("210", "Milano", "Milano")),
-                (new SeggioElettorale("211", "Pisa", "Firenze"))
+                (new SeggioElettorale("210", "Milano", "Lombardia")),
+                (new SeggioElettorale("211", "Pisa", "Toscana"))
             };
         }
 
@@ -65,14 +65,14 @@ namespace ElectionDay
 
         private void btnCalcNaz_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3(SeggiRegionali, btnCalcNaz);
+            Form3 f = new Form3(Seggi, btnCalcNaz);
             f.ShowDialog();
         } 
 
         private void btnCalcReg_Click(object sender, EventArgs e)
         {
 
-            Form3 f = new Form3(Seggi, btnCalcReg, lblRegPV);
+            Form3 f = new Form3(SeggiRegionali, btnCalcReg, lblRegPV);
             f.ShowDialog();
         }
     }
