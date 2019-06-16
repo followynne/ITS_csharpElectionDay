@@ -37,5 +37,20 @@ namespace ElectionDay.Classes
             get { return _votiTot; }
             set { _votiTot = value; }
         }
+
+        public string VotiCandidato(List<SeggioElettorale> seggi)
+        {
+            foreach (SeggioElettorale s in seggi)
+            {
+                foreach (Partito p in s.Partiti)
+                {
+                    if (this.PartitiAssociati.Exists(x => x.Nome.Equals(p.Nome)))
+                    {
+                        this.VotiTot += p.Voto;
+                    }
+                }
+            }
+            return "Per il candidato " + _nome + " i voti sono:\r\n" + _votiTot;
+        }
     }
 }

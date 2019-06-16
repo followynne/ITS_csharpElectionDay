@@ -84,7 +84,7 @@ namespace ElectionDay.Classes
 
         public string Riepilogo()
         {
-            string results = "I voti del seguente seggio " + _numSeggio + " sono:\n";
+            string results = "I voti del seguente seggio " + _numSeggio + ", città " + _città + ", regione " + _regione + " sono:\n";
             foreach(Partito p in _partiti)
             {
                 results += p.Nome + " " + p.Voto + "\n";

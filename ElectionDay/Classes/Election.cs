@@ -10,11 +10,6 @@ namespace ElectionDay.Classes
 {
     public static class Election
     {
-        static List<Candidato> candidati = new List<Candidato> {
-                new Candidato ("Salvini", new List<Partito> { new Partito("PD"), new Partito("Sinistra Radicale") }),
-                new Candidato ("Renzi", new List<Partito> { new Partito("Lega Nord"), new Partito("Fratelli d'Italia"), new Partito("Fratelli d'Italia")}),
-                new Candidato ("Marcone", new List<Partito> { new Partito("M5S"), new Partito("Forza Italia")})};
-
         public static string VotiTotali(List<SeggioElettorale> seggi)
         {
             int totalVotes = 0, bianchi = 0, nulle = 0;
@@ -43,59 +38,16 @@ namespace ElectionDay.Classes
                 votiPartiti += seggi[0].Partiti[i].Nome + ": " + partito + "\r\n";
                 save.Add(seggi[0].Partiti[i].Nome, partito);
             }
-
-            int tmp = (save.Where(x => x.Value == (save.Max(x3 => x3.Value))).Select(p => p.Key).Count());
-            if (tmp > 1)
+            string winners = "";
+            foreach (KeyValuePair<string, int> s in save)
             {
-                MessageBox.Show("lol");
-            } else
-            {
-                MessageBox.Show("lol2");
+                if (s.Value == save.Max(x => x.Value))
+                {
+                    winners += s.Key + " " + s.Value + "\r\n";
+                }
             }
-                //+ "Il punteggio più alto l'ha ottenuto: " + save.FirstOrDefault(x => x.Value == save.Values.Max()).Key
-                //+ " " + save.Values.Max();
+            votiPartiti += "\r\nA vincere queste elezioni...\r\n" + winners + "\r\n";
             return "\r\nI voti dei partiti sono:\r\n" + votiPartiti + "\r\n"; 
         }
-
-        public static string ToStringPartiti(List<SeggioElettorale> seggi)
-        {
-            string risultati = "";
-
-            foreach (SeggioElettorale s in seggi)
-            {
-                risultati += "Per il seggio " + s.NumSeggio + ", città " + s.Città + ", regione " + s.Regione + ", i risultati sono:\r\n";
-                foreach (Partito p in s.Partiti)
-                {
-                    risultati += p.Nome + " = " + p.Voto + "\r\n";
-                }
-                risultati += "Schede Nulle = " + s.SchedeNulle + "\r\n";
-                risultati += "Schede Bianche = " + s.SchedeBianche + "\r\n\r\n";
-            }
-            return risultati;
-        }
-
-        public static string VotiCandidati(List<SeggioElettorale> seggi)
-        {
-            foreach (SeggioElettorale s in seggi)
-            {
-                foreach (Partito p in s.Partiti)
-                {
-                    for (int i = 0; i < candidati.Count; i++)
-                    {
-                        if (candidati[i].PartitiAssociati.Exists(x => x.Nome.Equals(p.Nome)))
-                        {
-                            candidati[i].VotiTot += p.Voto;
-                        }
-                    }
-                }
-            }
-            string stampa = "Per ogni candidato i voti sono:\r\n";
-            for (int i = 0; i<candidati.Count; i++)
-            {
-                stampa += candidati[i].Nome + " = " + candidati[0].VotiTot + "\r\n";
-            }
-            return stampa + "\r\n";
-        }
-
     }
 }

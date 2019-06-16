@@ -1,0 +1,27 @@
+I voti del seguente seggio 201, città Torino, regione Piemonte sono:
+PD 0
+Lega Nord 0
+M5S 0
+Forza Italia 0
+Fratelli d'Italia 0
+Sinistra Radicale 0
+Schede Bianche 0
+Schede Nulle 0
+I voti del seguente seggio 202, città Torino, regione Piemonte sono:
+PD 0
+Lega Nord 0
+M5S 0
+Forza Italia 0
+Fratelli d'Italia 0
+Sinistra Radicale 0
+Schede Bianche 0
+Schede Nulle 0
+I voti del seguente seggio 215, città Alba, regione Piemonte sono:
+PD 0
+Lega Nord 0
+M5S 0
+Forza Italia 0
+Fratelli d'Italia 0
+Sinistra Radicale 0
+Schede Bianche 0
+Schede Nulle 0

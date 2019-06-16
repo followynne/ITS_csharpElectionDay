@@ -37,7 +37,7 @@
             // 
             // btnNazionali
             // 
-            this.btnNazionali.Location = new System.Drawing.Point(474, 84);
+            this.btnNazionali.Location = new System.Drawing.Point(425, 74);
             this.btnNazionali.Margin = new System.Windows.Forms.Padding(4);
             this.btnNazionali.Name = "btnNazionali";
             this.btnNazionali.Size = new System.Drawing.Size(171, 83);
@@ -48,7 +48,7 @@
             // 
             // btnRegionali
             // 
-            this.btnRegionali.Location = new System.Drawing.Point(139, 84);
+            this.btnRegionali.Location = new System.Drawing.Point(119, 74);
             this.btnRegionali.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegionali.Name = "btnRegionali";
             this.btnRegionali.Size = new System.Drawing.Size(184, 83);
@@ -59,7 +59,7 @@
             // 
             // btnCalcReg
             // 
-            this.btnCalcReg.Location = new System.Drawing.Point(109, 285);
+            this.btnCalcReg.Location = new System.Drawing.Point(89, 275);
             this.btnCalcReg.Name = "btnCalcReg";
             this.btnCalcReg.Size = new System.Drawing.Size(233, 83);
             this.btnCalcReg.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btnCalcNaz
             // 
-            this.btnCalcNaz.Location = new System.Drawing.Point(445, 285);
+            this.btnCalcNaz.Location = new System.Drawing.Point(396, 275);
             this.btnCalcNaz.Name = "btnCalcNaz";
             this.btnCalcNaz.Size = new System.Drawing.Size(233, 83);
             this.btnCalcNaz.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             this.lblRegPV.AutoSize = true;
             this.lblRegPV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegPV.Location = new System.Drawing.Point(192, 150);
+            this.lblRegPV.Location = new System.Drawing.Point(172, 140);
             this.lblRegPV.Name = "lblRegPV";
             this.lblRegPV.Size = new System.Drawing.Size(79, 20);
             this.lblRegPV.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 492);
+            this.ClientSize = new System.Drawing.Size(704, 469);
             this.Controls.Add(this.lblRegPV);
             this.Controls.Add(this.btnCalcNaz);
             this.Controls.Add(this.btnCalcReg);

@@ -13,25 +13,22 @@ namespace ElectionDay
 {
     public partial class Form2 : Form
     {
-        private List<SeggioElettorale> seggi;
+        private List<SeggioElettorale> _seggi;
         private Button _button;
-        private Boolean flag = false;
 
         public Form2(List<SeggioElettorale> seggi)
         {
             InitializeComponent();
-            this.seggi = seggi;
+            this._seggi = seggi;
             int i = 0;
             foreach (SeggioElettorale s in seggi)
             {
                 cbxSeggio.Items.Add(s);
                 cbxSeggio.DisplayMember= s.NumSeggio;
-                //cbxSeggio.Text = s.NumSeggio;
             }
             foreach (Partito p in seggi[0].Partiti)
             {
                 cbxPartiti.Items.Add(p);
-                //cbxPartiti.Items[i-seggi.Count] = p.Nome;
                 i++;
             }
         }
@@ -39,20 +36,17 @@ namespace ElectionDay
         public Form2(List<SeggioElettorale> seggi, Button b)
         {
             InitializeComponent();
-            this.seggi = seggi;
+            this._seggi = seggi;
             _button = b;
-            flag= true;
             int i = 0;
             foreach (SeggioElettorale s in seggi)
             {
                 cbxSeggio.Items.Add(s);
                 cbxSeggio.DisplayMember = s.NumSeggio;
-                //cbxSeggio.Text = s.NumSeggio;
             }
             foreach (Partito p in seggi[0].Partiti)
             {
                 cbxPartiti.Items.Add(p);
-                //cbxPartiti.Items[i-seggi.Count] = p.Nome;
                 i++;
             }
         }
@@ -67,11 +61,6 @@ namespace ElectionDay
                 txtBianche.Text = ""+s.SchedeBianche;
                 txtNulle.Text = ""+s.SchedeNulle;
                 textBox1.Text = s.Riepilogo();
-                if (flag)
-                {
-                    //lblCandidato.Text = Election.
-                    //MessageBox.Show("Lol");
-                }
             }
             catch (Exception)
             {
@@ -83,22 +72,22 @@ namespace ElectionDay
         {
             try
             {
-                int s = seggi.FindIndex(x => x.NumSeggio.Equals(((SeggioElettorale)cbxSeggio.SelectedItem).NumSeggio));
-                int p = seggi[s].Partiti.FindIndex(x => x.Nome.Equals(((Partito)cbxPartiti.SelectedItem).Nome));
+                int s = _seggi.FindIndex(x => x.NumSeggio.Equals(((SeggioElettorale)cbxSeggio.SelectedItem).NumSeggio));
+                int p = _seggi[s].Partiti.FindIndex(x => x.Nome.Equals(((Partito)cbxPartiti.SelectedItem).Nome));
 
                 if (!(int.TryParse(txtVoto.Text, out int res)))
                 {
-                    seggi[s].Partiti[p].Voto = 0;
+                    _seggi[s].Partiti[p].Voto = 0;
                 }
                 else
                 {
-                    seggi[s].Partiti[p].Voto = res;
+                    _seggi[s].Partiti[p].Voto = res;
                 };
-                textBox1.Text = seggi[s].Riepilogo();
+                textBox1.Text = _seggi[s].Riepilogo();
             }
             catch (Exception)
             { 
-                MessageBox.Show("LOL!");
+                MessageBox.Show("Hai messo dei dati non validi, controlla!");
             }
         }
 
@@ -106,30 +95,30 @@ namespace ElectionDay
         {
             try
             {
-                int s = seggi.FindIndex(x => x.NumSeggio.Equals(((SeggioElettorale)cbxSeggio.SelectedItem).NumSeggio));
-                int p = seggi[s].Partiti.FindIndex(x => x.Nome.Equals(((Partito)cbxPartiti.SelectedItem).Nome));
+                int s = _seggi.FindIndex(x => x.NumSeggio.Equals(((SeggioElettorale)cbxSeggio.SelectedItem).NumSeggio));
+                int p = _seggi[s].Partiti.FindIndex(x => x.Nome.Equals(((Partito)cbxPartiti.SelectedItem).Nome));
 
                 if (!(int.TryParse(txtBianche.Text, out int res)))
                 {
-                    seggi[s].SchedeBianche = 0;
+                    _seggi[s].SchedeBianche = 0;
                 }
                 else
                 {
-                    seggi[s].SchedeBianche= res;
+                    _seggi[s].SchedeBianche= res;
                 };
                 if (!(int.TryParse(txtNulle.Text, out int res2)))
                 {
-                    seggi[s].SchedeNulle = 0;
+                    _seggi[s].SchedeNulle = 0;
                 }
                 else
                 {
-                    seggi[s].SchedeNulle = res2;
+                    _seggi[s].SchedeNulle = res2;
                 };
-                textBox1.Text = seggi[s].Riepilogo();
+                textBox1.Text = _seggi[s].Riepilogo();
             }
             catch (Exception)
             {
-                MessageBox.Show("LOL!");
+                MessageBox.Show("Hai messo dei dati non validi, controlla!");
             }
         }
     }

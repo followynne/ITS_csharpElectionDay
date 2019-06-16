@@ -16,40 +16,42 @@ namespace ElectionDay
     public partial class Form3 : Form
     {
         private Button _button = null;
-        private Label _label = null;
         private List<SeggioElettorale> _seggi = null;
+        private List<Candidato> candidati = null;
 
         public Form3(List<SeggioElettorale> seggi, Button b)
         {
             InitializeComponent();
             _seggi = seggi;
             _button = b;
-        }
-
-        public Form3(List<SeggioElettorale> seggi, Button b, Label l)
-        {
-            InitializeComponent();
-            _seggi = seggi;
-            _button = b;
-            _label = l;
+            candidati = new List<Candidato> {
+                new Candidato ("Salvini", new List<Partito> { new Partito("PD"), new Partito("Sinistra Radicale") }),
+                new Candidato ("Renzi", new List<Partito> { new Partito("Lega Nord"), new Partito("Fratelli d'Italia"), new Partito("Fratelli d'Italia")}),
+                new Candidato ("Marcone", new List<Partito> { new Partito("M5S"), new Partito("Forza Italia")})};
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            if (_button.Name.Equals("btnCalcNaz")) {
-                textBox1.AppendText(Election.VotiTotali(_seggi));
-                textBox1.AppendText(Election.VotiPartiti(_seggi));
-                // stampa su file con ToStringPartiti
-            } else if (_button.Name.Equals("btnCalcReg"))
+            textBox1.AppendText(Election.VotiTotali(_seggi));
+            textBox1.AppendText(Election.VotiPartiti(_seggi));
+            if (_button.Name.Equals("btnCalcReg"))
             {
-                textBox1.AppendText(Election.VotiTotali(_seggi));
-                textBox1.AppendText(Election.VotiPartiti(_seggi));
-                textBox1.AppendText(Election.VotiCandidati(_seggi));
+               string resCandidati = "";
+               foreach (Candidato c in candidati)
+               {
+                  resCandidati +=  c.VotiCandidato(_seggi);
+               }
+               textBox1.AppendText(resCandidati);
             }
 
-            string path = @"../../File/x" + DateTime.Now.ToString("yyyyMMdd hhmm") + ".txt";
+            string path = @"../../File/x" + DateTime.Now.ToString("yyyyMMdd hhmmss") + ".txt";
             var f = File.CreateText(path);
-            f.Write(Election.ToStringPartiti(_seggi));
+            string riepilogo = "";
+            foreach (SeggioElettorale s in _seggi)
+            {
+                riepilogo += s.Riepilogo();
+            };
+            f.Write(riepilogo);
             f.Close();
         }
     }
